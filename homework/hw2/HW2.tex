@@ -117,7 +117,7 @@
 \vspace{-1em}
 \begin{itemize}
 \item You are welcome to discuss with your peers or the TAs if you run into challenges, but you need to declare any such discussion and everyone needs to write their own solutions independently.
-%\item TA in charge of this homework: Dan Qiao(\url{danqiao@ucsb.edu})
+\item You may refer to the matrix cookbook for matrix calculations: \url{https://www2.imm.dtu.dk/pubdb/edoc/imm3274.pdf}
 \end{itemize}
 \vspace{-2em}
 \rule[-10pt]{16.5cm}{0.05em} \\
@@ -132,8 +132,8 @@ Let's consider a simple two layer neural network for binary classification.
 	z_1 = W_1x^{(i)} + b_1\\
 	a_1 = ReLU(z_1)\\
 	z_2 = W_2 a_1 + b_2\\
-	\hat{y}^{(i)} = \sigma(z_2)\\
-	L^{(i)} = y^{(i)}*\log(\hat{y}^{(i)}) + (1- y^{(i)})*\log(1 - \hat{y}^{(i)})\\
+	\hat{p}^{(i)} = \sigma(z_2)\\
+	L^{(i)} = y^{(i)}*\log(\hat{p}^{(i)}) + (1- y^{(i)})*\log(1 - \hat{p}^{(i)})\\
 	J = -\frac{1}{m} \displaystyle \sum_{i=1}^{m}L^{(i)}\\
 \end{gather*}
 It has input size $2\times 1$, one hidden layer size $3\times 1$, and output size $1$. $\sigma(\cdot)$ is the Sigmoid function.
@@ -183,9 +183,9 @@ $,
 and the ground-truth label $y=0$.
 
 \begin{enumerate}
-	\item (5') What is the network prediction $\hat{y}$?
-	\item (5') What is ${\partial J}$ / ${\partial \hat{y}}$?
-	\item (5') What is ${\partial \hat{y}^{(i)}}$ / ${\partial z_2}$?
+	\item (5') What is the network prediction $\hat{p}$?
+	\item (5') What is ${\partial J}$ / ${\partial \hat{p}}$?
+	\item (5') What is ${\partial \hat{p}^{(i)}}$ / ${\partial z_2}$?
 	\item (5') What is ${\partial z_2}$ / ${\partial a_1}$?
 	\item (5') What is ${\partial a_1}$ / ${\partial z_1}$?
 	\item (5') What is ${\partial z_1}$ / ${\partial W_1}$?
